@@ -1,0 +1,28 @@
+{
+  "name": "interview-backend-payment",
+  "version": "1.0.0",
+  "description": "interview coding challenge for backend payment developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eversport/interview-backend-payment.git"
+  },
+  "author": "stefan.fuchs@eversports.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eversport/interview-backend-payment/issues"
+  },
+  "homepage": "https://github.com/eversport/interview-backend-payment#readme",
+  "devDependencies": {
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "stripe": "^8.96.0",
+    "uuid": "^8.3.0"
+  }
+}
