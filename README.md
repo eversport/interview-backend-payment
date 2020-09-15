@@ -6,8 +6,8 @@ You can find a javascript function called calculateOnlinePaymentFee.js in the ap
 
 ### 2. Implement a function that creates a payment
 Implement a function at the right place in the app folder in typescript, that:
-- takes a customerId, an amount, a payment method and a currency and creates a charge at stripe
-- creates a system payment and persist it
+- takes a customerId, an amount, a payment method and a currency and creates a charge at stripe. You can use the stripe api documentation to figure out how to create a charge at stripe (https://stripe.com/docs/api)
+- persist the payment by using the repository
 
 ## QUESTIONS
 1. What would you test in our small application?
