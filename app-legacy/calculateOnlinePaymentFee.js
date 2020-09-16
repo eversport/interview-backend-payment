@@ -15,14 +15,19 @@ const calculateOnlinePaymentFee = (payment, rates) => {
   const usedRates = rates || defaultRates
 
   // get the right rate base on the paymentService of the payment
-  const rate = usedRates.find(rate => rate.paymentMethod === payment.paymentMethod)
-  if (!rate) {
+  let selectedRate
+  usedRates.forEach(function(rate) {
+    if (rate.paymentMethod === payment.paymentMethod) {
+      selectedRate = rate
+    }
+  })
+  if (!selectedRate) {
     throw new Error(`no rate found for paymentService ${payment.paymentMethod}`)
   }
 
   return {
     feeAmount: Math.round((payment.amount / 100) * rate.rate),
-    rate: rate
+    rate: selectedRate
   }
 }
 
