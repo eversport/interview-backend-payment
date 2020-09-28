@@ -20,7 +20,8 @@ export class PaymentService {
    * @param {string} paymentMethod - either 'creditcard', 'sofort' or 'sepa'
    * @param {currency} currency - the currency of the payment
    * 
-   * 1. initialise a payment at stripe
+   * 1. initialise a payment at stripe (hint: use the charge api although it is deprecated, 
+   *     the payment method is not needed to create the charge because the stripe customer has a default payment method)
    * 2. create a new Payment in our system and persist it (with the help of the repository)
    */
   async createPayment() {}

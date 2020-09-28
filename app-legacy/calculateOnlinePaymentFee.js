@@ -26,7 +26,7 @@ const calculateOnlinePaymentFee = (payment, rates) => {
   }
 
   return {
-    feeAmount: Math.round((payment.amount / 100) * rate.rate),
+    feeAmount: Math.round((payment.amount / 100) * selectedRate.rate),
     rate: selectedRate
   }
 }
